@@ -89,3 +89,157 @@ a:active {
 }
 
 /*-------------------------------------*/
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.container {
+	max-width: 1180px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+.header {
+	position: relative;
+	z-index: 2;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: inherit;
+		padding: 0 40px;
+	}
+
+	&__logo {
+		max-width: 160px;
+
+	}
+
+	&__logo-img {
+		width: 100%;
+	}
+
+	&__navigation {}
+
+}
+
+.navigation {
+
+	display: flex;
+	align-items: center;
+
+
+	&__link {
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		font-size: 16px;
+		font-weight: 700;
+		background-image: linear-gradient(to right,
+			#54b3d6,
+			#54b3d6 50%,
+			#fff 50%);
+		background-size: 200% 100%;
+		background-position: -100%;
+		display: inline-block;
+		padding: 5px 0;
+		position: relative;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		transition: all 0.3s ease-in-out;
+
+		&:before {
+			content: '';
+			background: #54b3d6;
+			display: block;
+			position: absolute;
+			bottom: -3px;
+			left: 0;
+			width: 0;
+			height: 1px;
+			transition: all 0.3s ease-in-out;
+		}
+
+		&:hover {
+			background-position: 0;
+		}
+
+		&:hover::before {
+			width: 100%;
+		}
+	}
+
+}
+
+.hero {
+
+	color: #fff;
+
+	&::after {
+		content: '';
+		display: block;
+		background-color: #000;
+		opacity: .4;
+		width: 100%;
+		height: 90vh;
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+	}
+
+	&__background-video {
+		object-fit: cover;
+		width: 100%;
+		height: 90vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+
+	}
+
+	&__container {
+		position: relative;
+		z-index: 2;
+		display: grid;
+		grid-template-columns: 1.2fr .8fr;
+		height: 60vh;
+		align-items: center;
+	}
+
+	&__skills {}
+
+	&__skills-text {}
+
+	&__skills-box {
+		display: flex;
+		align-items: center;
+	}
+
+	&__skills-img {
+		width: 50px;
+		height: 50px;
+	}
+
+	&__box {}
+
+	&__suptitle {}
+
+	&__title {}
+
+	&__subtitle {}
+
+	&__links {}
+
+	&__link {}
+}
