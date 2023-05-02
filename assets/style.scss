@@ -101,7 +101,7 @@ a:active {
 }
 
 .container {
-	max-width: 1180px;
+	max-width: 1004px;
 	padding: 0 20px;
 	margin: 0 auto;
 }
@@ -109,6 +109,11 @@ a:active {
 .header {
 	position: relative;
 	z-index: 2;
+	width: 100%;
+	height: 60px;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
 
 	&__container {
 		display: flex;
@@ -116,6 +121,7 @@ a:active {
 		justify-content: space-between;
 		max-width: inherit;
 		padding: 0 40px;
+		width: 100%;
 	}
 
 	&__logo {
@@ -162,10 +168,10 @@ a:active {
 			background: #54b3d6;
 			display: block;
 			position: absolute;
-			bottom: -3px;
+			bottom: -2px;
 			left: 0;
 			width: 0;
-			height: 1px;
+			height: 1.5px;
 			transition: all 0.3s ease-in-out;
 		}
 
@@ -213,7 +219,7 @@ a:active {
 		z-index: 2;
 		display: grid;
 		grid-template-columns: 1.2fr .8fr;
-		height: 60vh;
+		height: 80vh;
 		align-items: center;
 	}
 
@@ -242,4 +248,165 @@ a:active {
 	&__links {}
 
 	&__link {}
+}
+
+
+
+
+
+.portfolio {
+	margin-top: 60px;
+
+	&__main-title {
+		text-align: center;
+		font-size: 34px;
+
+	}
+
+	&__links {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		inset: auto auto 10px 30px;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: all 0.1s ease;
+	}
+
+	&__box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 30px;
+
+		&:last-child {
+			position: relative;
+			margin-top: 10px;
+			gap: 10px;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+			justify-content: center;
+		}
+	}
+
+	&__btn {
+		padding: 5px 10px;
+		border-radius: 5px;
+		background-color: #000;
+		color: #fff;
+		text-transform: capitalize;
+
+		&.active {
+			background-color: #54b3d6;
+		}
+
+		&:not(:last-child) {
+			margin-right: 5px;
+		}
+	}
+
+	&__card {
+		color: #fff;
+
+		&.hide {
+			animation: slide-up 0.5s ease-in-out forwards;
+		}
+
+		background-color: #000;
+		background-blend-mode: multiply;
+		width: 100%;
+		height: 16rem;
+		border-radius: 10px;
+		overflow: hidden;
+		position: relative;
+		box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+
+		&:hover h2 {
+			inset: auto auto 78% 30px;
+			transition: inset 0.3s ease-out;
+		}
+
+		&:hover p,
+		&:hover div {
+			opacity: 1;
+			transition: opacity 0.5s 0.1s ease-in;
+		}
+
+		&:hover img {
+			opacity: 0.9;
+			transition: opacity 0.3s ease-in;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		opacity: 0.5;
+		transition: opacity 0.2s ease-out;
+		pointer-events: none;
+	}
+
+	&__img-icon {
+		width: 50px;
+		height: 50px;
+	}
+
+	&__img-link {
+		width: 30px;
+		height: 30px;
+
+	}
+
+	&__card-content {}
+
+	&__title {
+		position: absolute;
+		inset: auto auto 10px 30px;
+		margin: 0;
+		transition: inset 0.3s 0.3s ease-out;
+		font-weight: 500;
+		text-transform: uppercase;
+		display: flex;
+		justify-content: space-between;
+		width: 80%;
+		align-items: center;
+		text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+	}
+
+	&__subtitle {
+		inset: auto auto 50px 30px;
+		font-size: 12px;
+		font-weight: 400;
+		text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+	}
+
+	&__link {
+		&:not(:first-child) {
+			svg {
+				margin-top: 5px;
+			}
+
+		}
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		color: #fff;
+		text-decoration: none;
+	}
+
+
+
+	&__subtitle,
+	&__links {
+		position: absolute;
+		opacity: 0;
+		max-width: 80%;
+		transition: opacity 0.3s ease-out;
+	}
 }
