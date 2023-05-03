@@ -98,6 +98,7 @@ a:active {
 
 .main {
 	flex-grow: 1;
+	margin-bottom: 100px;
 }
 
 .container {
@@ -385,6 +386,7 @@ a:active {
 	}
 
 	&__link {
+
 		&:not(:first-child) {
 			svg {
 				margin-top: 5px;
@@ -396,7 +398,7 @@ a:active {
 			margin-right: 10px;
 		}
 
-		color: #fff;
+		color: #323232;
 		text-decoration: none;
 	}
 
@@ -408,5 +410,114 @@ a:active {
 		opacity: 0;
 		max-width: 80%;
 		transition: opacity 0.3s ease-out;
+	}
+}
+
+
+.contacts {
+
+	margin-top: 60px;
+
+	&__container {}
+
+	&__title {
+		text-align: center;
+		font-size: 34px;
+	}
+
+	&__subtitle {
+		display: block;
+		text-align: center;
+		font-size: 18px;
+		margin-top: 10px;
+	}
+
+	&__box {
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+
+	}
+
+	&__item {
+		margin-top: 20px;
+
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+
+		display: flex;
+		align-items: center;
+
+		div {
+			margin-left: 10px;
+		}
+
+	}
+
+	&__img {
+		width: 30px;
+		height: 30px;
+	}
+
+	&__item-title {
+		font-weight: 600;
+	}
+
+	&__item-subtitle {
+		text-decoration: underline;
+		display: inline-block;
+		margin-top: 5px;
+		color: #454545;
+	}
+}
+
+.footer {
+
+	height: 100px;
+	background-color: #454545;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__box {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+
+	}
+
+	&__copy {
+		color: #fff;
+
+	}
+
+	&__socials {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__link {
+		color: #fff;
+
+		&:first-child {
+			margin-bottom: -5px;
+		}
+	}
+
+	&__img-link {
+
+
+		width: 30px;
+		height: 30px;
 	}
 }
