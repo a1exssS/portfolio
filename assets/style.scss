@@ -18,6 +18,10 @@ body {
 		sans-serif;
 }
 
+body {
+	overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -110,6 +114,7 @@ a:active {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	overflow-x: hidden;
 }
 
 .main {
@@ -467,6 +472,7 @@ a:active {
 	}
 
 	&__img-link {
+		filter: drop-shadow(0px 0px 5px rgba(0, 111, 117, 0.719));
 		width: 30px;
 		height: 30px;
 
@@ -587,7 +593,7 @@ a:active {
 	&__img {
 		width: 30px;
 		height: 30px;
-		filter: drop-shadow(0px 0px 10px rgba(42, 228, 222, 0.5));
+		filter: drop-shadow(0px 0px 10px rgba(0, 172, 167, 0.605));
 	}
 
 	&__item-title {
