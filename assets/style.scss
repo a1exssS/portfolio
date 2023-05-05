@@ -102,6 +102,10 @@ a:active {
 	background-color: #fff;
 }
 
+::selection {
+	background-color: #54b3d64f;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -110,23 +114,32 @@ a:active {
 
 .main {
 	flex-grow: 1;
-	margin-bottom: 200px;
+	margin-bottom: 20vh;
 }
 
 .container {
 	max-width: 1004px;
 	padding: 0 20px;
 	margin: 0 auto;
+
+	@media(max-width: 768px) {
+		padding: 0 10px;
+	}
 }
 
 .header {
 	position: relative;
-	z-index: 2;
+	z-index: 4;
 	width: 100%;
 	height: 60px;
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
+
+	&__img-icon {
+		width: 50px;
+		height: 50px;
+	}
 
 	&__container {
 		display: flex;
@@ -135,6 +148,10 @@ a:active {
 		max-width: inherit;
 		padding: 0 40px;
 		width: 100%;
+
+		@media(max-width: 768px) {
+			padding: 0 10px;
+		}
 	}
 
 	&__logo {
@@ -152,14 +169,55 @@ a:active {
 
 .navigation {
 
+	&__btn {
+		position: relative;
+		z-index: 100;
+		display: none;
+
+		@media(max-width: 768px) {
+			display: block;
+		}
+	}
+
 	display: flex;
 	align-items: center;
+
+	@media(max-width: 768px) {
+		transition: .1s ease;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 100;
+		background-color: #8e8e8e;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		flex-grow: 1;
+		opacity: 0;
+		pointer-events: none;
+		transition: .3s ease-in-out;
+		transition-property: opacity;
+
+		&[data-menu="open"] {
+			opacity: 1;
+			pointer-events: auto;
+		}
+
+		text-transform: uppercase;
+	}
 
 
 	&__link {
 		&:not(:last-child) {
 			margin-right: 10px;
+
+			@media(max-width: 768px) {
+				margin-right: 0px;
+			}
 		}
+
 
 		font-size: 16px;
 		font-weight: 700;
@@ -176,24 +234,27 @@ a:active {
 		-webkit-text-fill-color: transparent;
 		transition: all 0.3s ease-in-out;
 
-		&:before {
-			content: '';
-			background: #54b3d6;
-			display: block;
-			position: absolute;
-			bottom: -2px;
-			left: 0;
-			width: 0;
-			height: 1.5px;
-			transition: all 0.3s ease-in-out;
-		}
+		@media(min-width: 769px) {
 
-		&:hover {
-			background-position: 0;
-		}
+			&:before {
+				content: '';
+				background: #54b3d6;
+				display: block;
+				position: absolute;
+				bottom: -2px;
+				left: 0;
+				width: 0;
+				height: 1.5px;
+				transition: all 0.3s ease-in-out;
+			}
 
-		&:hover::before {
-			width: 100%;
+			&:hover {
+				background-position: 0;
+			}
+
+			&:hover::before {
+				width: 100%;
+			}
 		}
 	}
 
@@ -230,11 +291,7 @@ a:active {
 	&__container {
 		position: relative;
 		z-index: 2;
-		// display: grid;
-		// grid-template-columns: 1.2fr .8fr;
 		height: 70vh;
-		// align-items: center;
-
 		display: flex;
 		align-items: center;
 	}
@@ -250,6 +307,18 @@ a:active {
 		font-size: 32px;
 		font-weight: 500;
 		margin-top: 20px;
+
+		@media(max-width: 920px) {
+			font-size: 24px;
+		}
+
+		@media(max-width: 768px) {
+			font-size: 20px;
+		}
+
+		@media(max-width: 576px) {
+			font-size: 18px;
+		}
 	}
 
 	&__title {
@@ -258,16 +327,40 @@ a:active {
 		width: 100%;
 		display: block;
 		text-align: start;
+
+		@media(max-width: 920px) {
+			font-size: 40px;
+			font-weight: 700;
+		}
+
+		@media(max-width: 768px) {
+			font-size: 36px;
+			font-weight: 600;
+		}
+
+		@media(max-width: 576px) {
+			font-size: 32px;
+			font-weight: 600;
+		}
 	}
 
 	&__link {
-		text-decoration: underline;
-		font-size: 16px;
 		margin-top: 40px;
-		text-transform: capitalize;
-		display: block;
-		color: #fff;
-		text-align: center;
+		display: flex;
+		justify-content: center;
+
+		a {
+			text-transform: capitalize;
+			text-decoration: underline;
+			font-size: 16px;
+			color: #fff;
+
+			&:hover {
+
+				text-decoration: none;
+			}
+
+		}
 	}
 }
 
@@ -276,7 +369,7 @@ a:active {
 
 
 .portfolio {
-	margin-top: 200px;
+	margin-top: 20vh;
 
 	&__main-title {
 		text-align: center;
@@ -433,9 +526,14 @@ a:active {
 
 .contacts {
 
-	margin-top: 200px;
+	margin-top: 20vh;
 
-	&__container {}
+	&__container {
+		@media(max-width: 576px) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
 
 	&__title {
 		text-align: center;
@@ -457,12 +555,23 @@ a:active {
 		justify-content: space-evenly;
 		flex-wrap: wrap;
 
+		@media(max-width: 576px) {
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-end;
+			margin: 0 auto;
+		}
+
 	}
 
 	&__item {
 		margin-top: 20px;
 
 		&:not(:last-child) {
+			@media(max-width: 576px) {
+				margin-right: 0;
+			}
+
 			margin-right: 15px;
 		}
 
@@ -541,11 +650,11 @@ a:active {
 
 .about {
 
-	margin-top: 200px;
+	margin-top: 25vh;
 
 	&__container {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		margin-top: 40px;
 		gap: 15px;
 	}

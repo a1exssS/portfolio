@@ -23,12 +23,18 @@
 				<a href="./index.html" class="header__logo">
 					<img src="./assets/images/logo.png" alt="" class="header__logo-img">
 				</a>
-				<nav class="header__navigation navigation">
+				<nav class="header__navigation navigation" data-menu="close">
 					<a href="#" class="navigation__link">Обо мне</a>
 					<a href="#" class="navigation__link">Портфолио</a>
 					<a href="#" class="navigation__link">Контакты</a>
 				</nav>
+				<button data-menu-open data-menu-close class="navigation__btn">
+					<svg class="header__img-icon">
+						<use xlink:href="/assets/images/sprite.svg#menu" />
+					</svg>
+				</button>
 			</div>
+
 		</header>
 		<main class="main">
 			<section class="hero">
@@ -40,7 +46,9 @@
 					<div class="hero__box">
 						<h1 class="hero__title">Привет! Мое имя Александр</h1>
 						<span class="hero__subtitle">Я - Фронтенд разработчик</span>
-						<a href="#" class="hero__link">Узнать больше</a>
+						<div class="hero__link">
+							<a href="#">Узнать больше</a>
+						</div>
 					</div>
 			</section>
 			<section class="about">
@@ -89,9 +97,9 @@
 					<h2 class="portfolio__main-title">Мое портфолио</h2>
 					<div class="portfolio__box">
 						<button class="portfolio__btn active" data-filter="all">все</button>
-						<button class="portfolio__btn" data-filter="lending-pages">lending pages</button>
+						<button class="portfolio__btn" data-filter="lending-pages">Лендинги</button>
 						<button class="portfolio__btn" data-filter="apps">приложения</button>
-						<button class="portfolio__btn" data-filter="api">api</button>
+						<button class="portfolio__btn" data-filter="api">API</button>
 					</div>
 					<div class="portfolio__box">
 
@@ -148,8 +156,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="portfolio__card api">
-							<img class="portfolio__img" src="/assets/images/next-invest.png" alt="" />
+						<div class="portfolio__card lending-pages">
+							<img class=" portfolio__img" src="/assets/images/next-invest.png" alt="" />
 							<div class="portfolio__card-content">
 								<h2 class="portfolio__title">
 									Next Invest
@@ -208,7 +216,7 @@
 								<use xlink:href="/assets/images/sprite.svg#vk" />
 							</svg>
 							<div>
-								<h3 class="contacts__item-title">Vk</h3>
+								<h3 class="contacts__item-title">Вконтакте</h3>
 								<a target="_blank" href="https://vk.com/id335324175" class="contacts__item-subtitle">Саша
 									Волков</a>
 							</div>
