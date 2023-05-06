@@ -123,7 +123,7 @@ a:active {
 }
 
 .container {
-	max-width: 1004px;
+	max-width: 1180px;
 	padding: 0 20px;
 	margin: 0 auto;
 
@@ -404,13 +404,13 @@ a:active {
 			margin-top: 10px;
 			gap: 10px;
 			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+			grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
 			justify-content: center;
 		}
 	}
 
 	&__btn {
-		padding: 5px 10px;
+		padding: 8px 15px;
 		border-radius: 5px;
 		background-color: #000;
 		color: #fff;
@@ -591,16 +591,18 @@ a:active {
 	}
 
 	&__img {
-		width: 30px;
-		height: 30px;
+		width: 40px;
+		height: 40px;
 		filter: drop-shadow(0px 0px 10px rgba(0, 172, 167, 0.605));
 	}
 
 	&__item-title {
+		font-size: 16px;
 		font-weight: 600;
 	}
 
 	&__item-subtitle {
+		font-size: 16px;
 		text-decoration: underline;
 		display: inline-block;
 		margin-top: 5px;
@@ -687,20 +689,22 @@ a:active {
 
 	&__img {
 		width: 100%;
-		height: 400px;
+		height: 500px;
 		object-fit: cover;
 		object-position: center;
 		border-radius: 10px;
 	}
 
 	&__text {
+
 		&:not(:first-child) {
 			margin-top: 20px;
 		}
 
-		font-size: 16px;
+		font-size: 18px;
 		line-height: 20px;
 		font-weight: 300;
+		line-height: 22px;
 	}
 
 	&__skill-box {
@@ -718,7 +722,7 @@ a:active {
 			height: 36px;
 		}
 
-		width: 40px;
-		height: 40px;
+		width: 50px;
+		height: 50px;
 	}
 }
