@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='UTF-8'>
+	<meta name='description' content=''>
+	<meta name='author' content=''>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link rel='icon' href='./assets/website-icon-5cf3d90d.png'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet">
+	<title>Alexsandr's Portfolio</title>
+	<script type="module" crossorigin src="./assets/index-52682ba4.js"></script>
+	<link rel="stylesheet" href="./assets/index-33b2034d.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container header__container">
+				<a href="./index.html" class="header__logo">
+					<img src="./assets/logo-092f24fd.png" alt="" class="header__logo-img">
+				</a>
+				<nav class="header__navigation navigation" data-menu="close">
+					<a href="#" class="navigation__link">Обо мне</a>
+					<a href="#" class="navigation__link">Портфолио</a>
+					<a href="#" class="navigation__link">Контакты</a>
+				</nav>
+				<button data-menu-open data-menu-close class="navigation__btn">
+					<svg class="header__img-icon">
+						<use xlink:href="./assets/sprite-d8b9b76e.svg#menu" />
+					</svg>
+				</button>
+			</div>
+
+		</header>
+		<main class="main">
+			<section class="hero">
+				<video id="background-video" class="hero__background-video" autoplay loop muted
+					poster="./assets/background-player-9c5a6e1e.png">
+					<source src="./assets/backgroundPlayer-24732169.mp4" type="video/mp4">
+				</video>
+				<div class="hero__container container">
+					<div class="hero__box">
+						<h1 class="hero__title">Привет! Мое имя Александр</h1>
+						<span class="hero__subtitle">Я - Фронтенд разработчик</span>
+						<div class="hero__link">
+							<a href="#">Узнать больше</a>
+						</div>
+					</div>
+			</section>
+			<section class="about">
+				<h2 class="about__title">Обо мне</h2>
+				<div class="about__container container">
+					<div class="about__box">
+						<img class="about__img" src="./assets/face-290fadb8.png" alt="">
+					</div>
+					<div class="about__box">
+						<p class="about__text">
+							Привет! Меня зовут Александр, мне 17 лет, и я живу в городе Дзержинск. Я начал интересоваться
+							программированием
+							в 16 лет и выбрал Frontend-разработку в качестве своей главной специальности.
+						</p>
+						<p class="about__text">
+
+							Как человек, который самостоятельно изучает Frontend-разработку, я страстно увлечен созданием
+							великолепных
+							веб-сайтов и приложений. Я освоил HTML, CSS, SCSS, JavaScript и PHP. Я мотивирован, усерден и
+							быстро адаптируюсь,
+							а также всегда готов к новым вызовам. Кроме того, я приветлив и открыт для сотрудничества в
+							команде.
+
+						</p>
+						<p class="about__text">
+							Я владею такими навыками, как: HTML, CSS, SASS, Javascript, PHP и GIT.
+						</p>
+						<div class="about__skill-box">
+							<svg class="about__img-icon">
+								<use xlink:href="./assets/sprite-d8b9b76e.svg#html" />
+							</svg>
+							<svg class="about__img-icon">
+								<use xlink:href="./assets/sprite-d8b9b76e.svg#css" />
+							</svg>
+							<svg class="about__img-icon">
+								<use xlink:href="./assets/sprite-d8b9b76e.svg#scss" />
+							</svg>
+							<svg class="about__img-icon">
+								<use xlink:href="./assets/sprite-d8b9b76e.svg#js" />
+							</svg>
+							<svg class="about__img-icon">
+								<use xlink:href="./assets/sprite-d8b9b76e.svg#php" />
+							</svg>
+							<svg class="about__img-icon">
+								<use xlink:href="./assets/sprite-d8b9b76e.svg#github" />
+							</svg>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="portfolio">
+				<div class="container portfolio__container">
+					<h2 class="portfolio__main-title">Мои Проекты</h2>
+					<div class="portfolio__box">
+						<button class="portfolio__btn active" data-filter="all">все</button>
+						<button class="portfolio__btn" data-filter="lending-pages">Лендинги</button>
+						<button class="portfolio__btn" data-filter="apps">приложения</button>
+						<button class="portfolio__btn" data-filter="api">API</button>
+					</div>
+					<div class="portfolio__box">
+
+
+						<div class="portfolio__card apps">
+							<img class="portfolio__img" src="./assets/game-box-9d63662d.png" alt="" />
+							<div class="portfolio__card-content">
+								<h2 class="portfolio__title">
+									game box
+
+								</h2>
+								<p class="portfolio__subtitle">
+									Этот проект был сделан при помощи Vite и включает в себя 3 игры Pacman, Snake, Minesweeper.
+									Все игры оптимизированны и каждый может играть в них с любого устройства (проект занал 5
+									дней)
+								</p>
+								<div class="portfolio__links">
+									<a target="_blank" href="https://a1exsss.github.io/game-box/" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#website" />
+										</svg>
+									</a>
+									<a target="_blank" href="https://github.com/a1exssS/game-box" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#github" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio__card lending-pages api">
+							<img class="portfolio__img" src="./assets/axios-2-329606f1.png" alt="" />
+							<div class="portfolio__card-content">
+								<h2 class="portfolio__title">
+									AxiosAPI
+								</h2>
+								<p class="portfolio__subtitle">
+									Это eCommerce сайт который использует API. Этот сайт был сделан через axios и в него входят
+									размещение товара на главной странице, возможность "купить" товар и удалить из карзины. Этот
+									проект также оптимизирован под все устройства (проект занял 4 дня)
+								</p>
+								<div class="portfolio__links">
+									<a target="_blank" href="https://a1exsss.github.io/axiosapi/" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#website" />
+										</svg>
+									</a>
+									<a target="_blank" href="https://github.com/a1exssS/axiosapi" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#github" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio__card lending-pages">
+							<img class=" portfolio__img" src="./assets/next-invest-46c53743.png" alt="" />
+							<div class="portfolio__card-content">
+								<h2 class="portfolio__title">
+									Next Invest
+								</h2>
+								<p class="portfolio__subtitle">
+									Это лендинг страница о сайте про инвестиции на нем хранится онформация для пользоваетлей
+									которые заинтерисованы
+									в инвестициях (проект занял 1 день)
+								</p>
+								<div class="portfolio__links">
+									<a target="_blank" href="https://a1exsss.github.io/lending-page-1/" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#website" />
+										</svg>
+									</a>
+									<a target="_blank" href="https://github.com/a1exssS/lending-page-1" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#github" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio__card lending-pages">
+							<img class=" portfolio__img" src="./assets/netflix-login-ae564f0c.png" alt="" />
+							<div class="portfolio__card-content">
+								<h2 class="portfolio__title">
+									Netflix login
+								</h2>
+								<p class="portfolio__subtitle">
+									Это копия главной логин страници Netflix. Это один из моих раних проектов. Этот сайт
+									опимизирован под все устройстваю (проект занял 1 день)
+								</p>
+								<div class="portfolio__links">
+									<a target="_blank" href="https://a1exsss.github.io/lending-page-2/" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#website" />
+										</svg>
+									</a>
+									<a target="_blank" href="https://github.com/a1exssS/lending-page-2" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#github" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio__card lending-pages">
+							<img class=" portfolio__img" src="./assets/lending-website-6de8730b.png" alt="" />
+							<div class="portfolio__card-content">
+								<h2 class="portfolio__title">
+									Landie
+								</h2>
+								<p class="portfolio__subtitle">
+									Этот лендин сайт а если быть точнее его карказ он был сверстан как тренеровка для мне но хочу
+									сказать что сделан он не плохо и оптимизирован под все устройства (проект занял 1 день)
+								</p>
+								<div class="portfolio__links">
+									<a target="_blank" href="https://a1exsss.github.io/lending-page-3/" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#website" />
+										</svg>
+									</a>
+									<a target="_blank" href="https://github.com/a1exssS/lending-page-3" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#github" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio__card lending-pages">
+							<img class=" portfolio__img" src="./assets/lending-website-2-52cdb101.png" alt="" />
+							<div class="portfolio__card-content">
+								<h2 class="portfolio__title">
+									KRYPTO.
+								</h2>
+								<p class="portfolio__subtitle">
+									Это лендин сайт о NFT. Он предлагает сотрудничество с пользователями и предлагает свои услуги
+									о NFT. Сайт
+									отлично оптимизирован и работает на всех устройствах (проект занял 1 день)
+								</p>
+								<div class="portfolio__links">
+									<a target="_blank" href="https://a1exsss.github.io/lending-page-4/" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#website" />
+										</svg>
+									</a>
+									<a target="_blank" href="https://github.com/a1exssS/lending-page-4" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#github" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio__card lending-pages">
+							<img class=" portfolio__img" src="./assets/lending-website-3-96faf3c0.png" alt="" />
+							<div class="portfolio__card-content">
+								<h2 class="portfolio__title">
+									SAUL's blog
+
+								</h2>
+								<p class="portfolio__subtitle">
+									это вступительная страница блога котоый специолизируется на веб-дизайне. Сайт оптимизирован
+									под все устройства
+									(проект занял 1 день)
+								</p>
+								<div class="portfolio__links">
+									<a target="_blank" href="https://a1exsss.github.io/lending-page-5/" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#website" />
+										</svg>
+									</a>
+									<a target="_blank" href="https://github.com/a1exssS/lending-page-5" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#github" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio__card lending-pages">
+							<img class=" portfolio__img" src="./assets/brand-login-d4791607.png" alt="" />
+							<div class="portfolio__card-content">
+								<h2 class="portfolio__title">
+									brand Login page
+								</h2>
+								<p class="portfolio__subtitle">
+									Это Логин страница brand сайта. Один из моих раних проектов. Этот сайт
+									опимизирован под все устройстваю (проект занял 1 день)
+								</p>
+								<div class="portfolio__links">
+									<a target="_blank" href="https://a1exsss.github.io/lending-page-6/" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#website" />
+										</svg>
+									</a>
+									<a target="_blank" href="https://github.com/a1exssS/lending-page-6" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#github" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio__card apps api">
+							<img class=" portfolio__img" src="./assets/fetch-1-924678c9.png" alt="" />
+							<div class="portfolio__card-content">
+								<h2 class="portfolio__title">
+									users list (fetch)
+								</h2>
+								<p class="portfolio__subtitle">
+									Это тестовый проект по пользованию fetch. В этот сайт входит 100 пользователей которые вы
+									можете загрузить и
+									посмотреть (проект занял 1 день)
+								</p>
+								<div class="portfolio__links">
+									<a target="_blank" href="https://a1exsss.github.io/Fetch/" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#website" />
+										</svg>
+									</a>
+									<a target="_blank" href="https://github.com/a1exssS/Fetch" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#github" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio__card apps api">
+							<img class=" portfolio__img" src="./assets/fetch-2-dd75f3e8.png" alt="" />
+							<div class="portfolio__card-content">
+								<h2 class="portfolio__title">
+									anime quiz (fetch)
+								</h2>
+								<p class="portfolio__subtitle">
+									Это еще один тестовый проект по пользованию fetch в этот сайт входит 20 аниме картинок и
+									страка заполнения,
+									ваша задача заполнить строку с правильным названием аниме, в конце сайта вы увидите свой
+									результат о том
+									сколько прально вы ответили (проект занял 2 деня)
+								</p>
+								<div class="portfolio__links">
+									<a target="_blank" href="https://a1exsss.github.io/Fetch2/" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#website" />
+										</svg>
+									</a>
+									<a target="_blank" href="https://github.com/a1exssS/Fetch2" class="portfolio__link">
+										<svg class="portfolio__img-link">
+											<use xlink:href="./assets/sprite-d8b9b76e.svg#github" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="contacts">
+				<div class="contacts__container container">
+					<h2 class="contacts__title">Контакты</h2>
+					<span class="contacts__subtitle">
+						Как можно со мной связаться
+					</span>
+					<div class="contacts__box">
+						<div class="contacts__item">
+							<svg class="contacts__img">
+								<use xlink:href="./assets/sprite-d8b9b76e.svg#email" />
+							</svg>
+							<div>
+								<h3 class="contacts__item-title">Почта</h3>
+								<a target="_blank" href="mailto:porkkoa@gmail.com"
+									class="contacts__item-subtitle">porkkoa@gmail.com</a>
+							</div>
+						</div>
+						<div class="contacts__item">
+							<svg class="contacts__img">
+								<use xlink:href="./assets/sprite-d8b9b76e.svg#telegram" />
+							</svg>
+							<div>
+								<h3 class="contacts__item-title">Телеграм</h3>
+								<a target="_blank" href="https://t.me/a1exss" class="contacts__item-subtitle">@a1exss</a>
+							</div>
+						</div>
+						<div class="contacts__item">
+							<svg class="contacts__img">
+								<use xlink:href="./assets/sprite-d8b9b76e.svg#vk" />
+							</svg>
+							<div>
+								<h3 class="contacts__item-title">Вконтакте</h3>
+								<a target="_blank" href="https://vk.com/id335324175" class="contacts__item-subtitle">Саша
+									Волков</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container container">
+				<div class="footer__box">
+					<h3 class="footer__copy">Copyright © 2023. All rights are reserved</h3>
+					<div class="footer__socials">
+						<a class="footer__link" aria-label="linkedin" target="_blank" rel="noreferrer"
+							href="https://nn.hh.ru/resume/2e125c3fff0bc81a980039ed1f416933376a34">
+							<svg class="footer__img-link">
+								<use xlink:href="./assets/sprite-d8b9b76e.svg#hh" />
+							</svg>
+						</a>
+						<a class="footer__link" aria-label="github" target="_blank" rel="noreferrer"
+							href="https://github.com/a1exssS">
+							<svg class="footer__img-link">
+								<use xlink:href="./assets/sprite-d8b9b76e.svg#github" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+</body>
+
+
+
+</html>
