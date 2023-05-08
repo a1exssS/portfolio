@@ -158,11 +158,11 @@ const zr = document.querySelector('[data-menu]'),
 	Ql = document.querySelectorAll('.navigation__link')
 Ql.forEach(a => {
 	a.addEventListener('click', () => {
-		;(zr.dataset.menu = 'close'),
+		;;(zr.dataset.menu = 'close'),
 			ia(zr),
 			(zn.innerHTML = `
 		<svg class="header__img-icon">
-			<use xlink:href="./assets/sprite.svg#menu" />
+			<use xlink:href="./assets/sprite-d8b9b76e.svg#menu" />
 		</svg>`)
 	})
 })
@@ -172,13 +172,13 @@ function na() {
 		  ia(zr),
 		  (zn.innerHTML = `
 		<svg class="header__img-icon">
-			<use xlink:href="./assets/sprite.svg#menu" />
+			<use xlink:href="./assets/sprite-d8b9b76e.svg#menu" />
 		</svg>`))
 		: ((zr.dataset.menu = 'open'),
 		  Kl(zr),
 		  (zn.innerHTML = `
 		<svg class="header__img-icon">
-			<use xlink:href="./assets/sprite.svg#close" />
+			<use xlink:href="./assets/sprite-d8b9b76e.svg#close" />
 		</svg>`))
 }
 zn.addEventListener('click', na)
