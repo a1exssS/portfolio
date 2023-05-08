@@ -1,3 +1,5 @@
+import {correctTrigger, correctTriggerScroll} from './gsap'
+
 const portfolioBtns = document.querySelectorAll('.portfolio__btn')
 const portfolioCards = document.querySelectorAll('.portfolio__card')
 
@@ -21,20 +23,21 @@ portfolioBtns.forEach(btn => {
 	})
 })
 
-// const showOverlay = () => {
-// 	const overlay = document.querySelector('.portfolio__loading-overlay')
-// 	overlay.classList.add('show')
-// 	setTimeout(() => {
-// 		overlay.classList.remove('show')
-// 	}, 500)
-// }
-
 const productBtns = document.querySelectorAll('.portfolio__btn')
 let lastActiveBtn = null
-
+let counter = 0
 let defaultBtn = document.querySelector('.portfolio__btn')
+if (counter == 0) {
+	correctTrigger()
+	correctTriggerScroll()
+}
 productBtns.forEach(btn => {
 	btn.addEventListener('click', () => {
+		++counter
+		if (counter !== 0) {
+			correctTrigger()
+			correctTriggerScroll()
+		}
 		if (lastActiveBtn) {
 			lastActiveBtn.classList.remove('active')
 		}
@@ -42,5 +45,4 @@ productBtns.forEach(btn => {
 		btn.classList.add('active')
 		lastActiveBtn = btn
 	})
-	// btn.addEventListener('click', showOverlay)
 })

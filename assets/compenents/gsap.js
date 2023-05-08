@@ -10,23 +10,25 @@ import {MotionPathPlugin} from 'gsap/MotionPathPlugin'
 import {PixiPlugin} from 'gsap/PixiPlugin'
 import {TextPlugin} from 'gsap/TextPlugin'
 
-const lenis = new Lenis({
-	duration: 1.2,
-	easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-	direction: 'vertical',
-	gestureDirection: 'vertical',
-	smooth: true,
-	mouseMultiplier: 1,
-	smoothTouch: false,
-	touchMultiplier: 2,
-	infinite: false,
-})
+function correctTriggerScroll() {
+	const lenis = new Lenis({
+		duration: 1.2,
+		easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+		direction: 'vertical',
+		gestureDirection: 'vertical',
+		smooth: true,
+		mouseMultiplier: 1,
+		smoothTouch: false,
+		touchMultiplier: 2,
+		infinite: false,
+	})
 
-function raf(time) {
-	lenis.raf(time)
+	function raf(time) {
+		lenis.raf(time)
+		requestAnimationFrame(raf)
+	}
 	requestAnimationFrame(raf)
 }
-requestAnimationFrame(raf)
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
@@ -257,26 +259,26 @@ contactsImg.forEach(item => {
 })
 
 if (ScrollTrigger.isTouch !== 1) {
-	contacts.forEach(item => {
-		gsap.fromTo(
-			item,
-			{
-				opacity: 0,
-				scale: 0,
-			},
-			{
-				scale: 1,
-				opacity: 1,
-				scrollTrigger: {
-					trigger: '.portfolio',
-					start: 'bottom 94%',
-					end: 'bottom 38%',
+	// contacts.forEach(item => {
+	// 	gsap.fromTo(
+	// 		item,
+	// 		{
+	// 			opacity: 0,
+	// 			scale: 0,
+	// 		},
+	// 		{
+	// 			scale: 1,
+	// 			opacity: 1,
+	// 			scrollTrigger: {
+	// 				trigger: '.portfolio',
+	// 				start: 'bottom 94%',
+	// 				end: 'bottom 38%',
 
-					scrub: true,
-				},
-			}
-		)
-	})
+	// 				scrub: true,
+	// 			},
+	// 		}
+	// 	)
+	// })
 
 	card.forEach(item => {
 		gsap.fromTo(
@@ -315,78 +317,77 @@ if (ScrollTrigger.isTouch !== 1) {
 			},
 		}
 	)
-	gsap.fromTo(
-		'.contacts__subtitle',
-		{
-			opacity: 0,
-			y: 100,
-		},
-		{
-			y: 0,
-			opacity: 1,
-			scrollTrigger: {
-				trigger: '.portfolio',
-				start: 'bottom 90%',
-				end: 'bottom 42%',
+	// gsap.fromTo(
+	// 	'.contacts__subtitle',
+	// 	{
+	// 		opacity: 0,
+	// 		y: 100,
+	// 	},
+	// 	{
+	// 		y: 0,
+	// 		opacity: 1,
+	// 		scrollTrigger: {
+	// 			trigger: '.portfolio',
+	// 			start: 'bottom 90%',
+	// 			end: 'bottom 42%',
 
-				scrub: true,
-			},
-		}
-	)
-	gsap.fromTo(
-		'.footer__socials',
-		{
-			opacity: 0,
-			x: -100,
-		},
-		{
-			x: 0,
-			opacity: 1,
-			scrollTrigger: {
-				trigger: '.footer',
-				start: 'top 96%',
-				end: '14% 90%',
+	// 			scrub: true,
+	// 		},
+	// 	}
+	// )
+	// gsap.fromTo(
+	// 	'.footer__socials',
+	// 	{
+	// 		opacity: 0,
+	// 		x: -100,
+	// 	},
+	// 	{
+	// 		x: 0,
+	// 		opacity: 1,
+	// 		scrollTrigger: {
+	// 			trigger: '.footer',
+	// 			start: 'top 96%',
+	// 			end: '14% 90%',
 
-				scrub: true,
-			},
-		}
-	)
-	gsap.fromTo(
-		'.footer__copy',
-		{
-			opacity: 0,
-			x: 100,
-		},
-		{
-			x: 0,
-			opacity: 1,
-			scrollTrigger: {
-				trigger: '.footer',
-				start: 'top 96%',
-				end: '14% 90%',
+	// 			scrub: true,
+	// 		},
+	// 	}
+	// )
+	// gsap.fromTo(
+	// 	'.footer__copy',
+	// 	{
+	// 		opacity: 0,
+	// 		x: 100,
+	// 	},
+	// 	{
+	// 		x: 0,
+	// 		opacity: 1,
+	// 		scrollTrigger: {
+	// 			trigger: '.footer',
+	// 			start: 'top 96%',
+	// 			end: '14% 90%',
 
-				scrub: true,
-			},
-		}
-	)
-	gsap.fromTo(
-		'.contacts__title',
-		{
-			opacity: 0,
-			y: 100,
-		},
-		{
-			y: 0,
-			opacity: 1,
-			scrollTrigger: {
-				trigger: '.portfolio',
-				start: 'bottom 92%',
-				end: 'bottom 40%',
-
-				scrub: true,
-			},
-		}
-	)
+	// 			scrub: true,
+	// 		},
+	// 	}
+	// )
+	// gsap.fromTo(
+	// 	'.contacts__title',
+	// 	{
+	// 		opacity: 0,
+	// 		y: 100,
+	// 	},
+	// 	{
+	// 		y: 0,
+	// 		opacity: 1,
+	// 		scrollTrigger: {
+	// 			trigger: '.contacts',
+	// 			start: 'top 92%',
+	// 			end: 'top 40%',
+	// 			scrub: true,
+	// 		},
+	// 	}
+	// )
 
 	gsap.fromTo(
 		aboutBox[1],
@@ -464,26 +465,26 @@ if (ScrollTrigger.isTouch !== 1) {
 }
 
 if (ScrollTrigger.isTouch == 1) {
-	contacts.forEach(item => {
-		gsap.fromTo(
-			item,
-			{
-				opacity: 0,
-				scale: 0,
-			},
-			{
-				scale: 1,
-				opacity: 1,
-				scrollTrigger: {
-					trigger: '.portfolio',
-					start: 'bottom 94%',
-					end: 'bottom 38%',
+	// contacts.forEach(item => {
+	// 	gsap.fromTo(
+	// 		item,
+	// 		{
+	// 			opacity: 0,
+	// 			scale: 0,
+	// 		},
+	// 		{
+	// 			scale: 1,
+	// 			opacity: 1,
+	// 			scrollTrigger: {
+	// 				trigger: '.portfolio',
+	// 				start: 'bottom 94%',
+	// 				end: 'bottom 38%',
 
-					scrub: true,
-				},
-			}
-		)
-	})
+	// 				scrub: true,
+	// 			},
+	// 		}
+	// 	)
+	// })
 	card.forEach(item => {
 		gsap.fromTo(
 			item,
@@ -521,78 +522,60 @@ if (ScrollTrigger.isTouch == 1) {
 			},
 		}
 	)
-	gsap.fromTo(
-		'.contacts__subtitle',
-		{
-			opacity: 0,
-			y: 100,
-		},
-		{
-			y: 0,
-			opacity: 1,
-			scrollTrigger: {
-				trigger: '.portfolio',
-				start: 'bottom 90%',
-				end: 'bottom 42%',
+	// gsap.fromTo(
+	// 	'.contacts__subtitle',
+	// 	{
+	// 		opacity: 0,
+	// 		y: 100,
+	// 	},
+	// 	{
+	// 		y: 0,
+	// 		opacity: 1,
+	// 		scrollTrigger: {
+	// 			trigger: '.contacts',
+	// 			start: 'top 90%',
+	// 			end: 'top 42%',
 
-				scrub: true,
-			},
-		}
-	)
-	gsap.fromTo(
-		'.footer__socials',
-		{
-			opacity: 0,
-			x: -100,
-		},
-		{
-			x: 0,
-			opacity: 1,
-			scrollTrigger: {
-				trigger: '.footer',
-				start: 'top 96%',
-				end: '14% 90%',
+	// 			scrub: true,
+	// 		},
+	// 	}
+	// )
+	// gsap.fromTo(
+	// 	'.footer__socials',
+	// 	{
+	// 		opacity: 0,
+	// 		x: -100,
+	// 	},
+	// 	{
+	// 		x: 0,
+	// 		opacity: 1,
+	// 		scrollTrigger: {
+	// 			trigger: '.footer',
+	// 			start: 'top 96%',
+	// 			end: '14% 90%',
 
-				scrub: true,
-			},
-		}
-	)
-	gsap.fromTo(
-		'.footer__copy',
-		{
-			opacity: 0,
-			x: 100,
-		},
-		{
-			x: 0,
-			opacity: 1,
-			scrollTrigger: {
-				trigger: '.footer',
-				start: 'top 96%',
-				end: '14% 90%',
+	// 			scrub: true,
+	// 		},
+	// 	}
+	// )
+	// gsap.fromTo(
+	// 	'.footer__copy',
+	// 	{
+	// 		opacity: 0,
+	// 		x: 100,
+	// 	},
+	// 	{
+	// 		x: 0,
+	// 		opacity: 1,
+	// 		scrollTrigger: {
+	// 			trigger: '.footer',
+	// 			start: 'top 96%',
+	// 			end: '14% 90%',
 
-				scrub: true,
-			},
-		}
-	)
-	gsap.fromTo(
-		'.contacts__title',
-		{
-			opacity: 0,
-			y: 100,
-		},
-		{
-			y: 0,
-			opacity: 1,
-			scrollTrigger: {
-				trigger: '.portfolio',
-				start: 'bottom 92%',
-				end: 'bottom 40%',
-
-				scrub: true,
-			},
-		}
-	)
+	// 			scrub: true,
+	// 		},
+	// 	}
+	// )
 
 	gsap.fromTo(
 		aboutBox[1],
@@ -668,3 +651,105 @@ if (ScrollTrigger.isTouch == 1) {
 		}
 	)
 }
+
+// const element = document.querySelector('.contacts')
+
+// const interval = setInterval(() => {
+// 	const rect = element.getBoundingClientRect()
+// 	const x = rect.left
+// 	const y = rect.top
+
+// 	console.log(`Element position: x=${x}, y=${y}`)
+// }, 100)
+
+function correctTrigger() {
+	gsap.fromTo(
+		'.contacts__title',
+		{
+			opacity: 0,
+			y: 100,
+		},
+		{
+			y: 0,
+			opacity: 1,
+			scrollTrigger: {
+				trigger: '.contacts',
+				start: 'top 92%',
+				end: 'top 80%',
+				scrub: true,
+			},
+		}
+	)
+	gsap.fromTo(
+		'.contacts__subtitle',
+		{
+			opacity: 0,
+			y: 100,
+		},
+		{
+			y: 0,
+			opacity: 1,
+			scrollTrigger: {
+				trigger: '.contacts',
+				start: 'top 90%',
+				end: 'top 76%',
+				scrub: true,
+			},
+		}
+	)
+	contacts.forEach(item => {
+		gsap.fromTo(
+			item,
+			{
+				opacity: 0,
+				scale: 0,
+			},
+			{
+				scale: 1,
+				opacity: 1,
+				scrollTrigger: {
+					trigger: '.contacts',
+					start: 'top 88%',
+					end: 'top 75%',
+					scrub: true,
+				},
+			}
+		)
+	})
+	gsap.fromTo(
+		'.footer__socials',
+		{
+			opacity: 0,
+			x: -100,
+		},
+		{
+			x: 0,
+			opacity: 1,
+			scrollTrigger: {
+				trigger: '.footer',
+				start: 'top 96%',
+				end: '10% 92%',
+				scrub: true,
+			},
+		}
+	)
+	gsap.fromTo(
+		'.footer__copy',
+		{
+			opacity: 0,
+			x: 100,
+		},
+		{
+			x: 0,
+			opacity: 1,
+			scrollTrigger: {
+				trigger: '.footer',
+				start: 'top 96%',
+				end: '10% 92%',
+				scrub: true,
+			},
+		}
+	)
+	ScrollTrigger.refresh()
+}
+export {correctTrigger, correctTriggerScroll}
