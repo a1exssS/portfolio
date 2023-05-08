@@ -162,7 +162,7 @@ Ql.forEach(a => {
 			ia(zr),
 			(zn.innerHTML = `
 		<svg class="header__img-icon">
-			<use xlink:href="./assets/sprite-d8b9b76e.svg#menu" />
+			<use xlink:href="./sprite-d8b9b76e.svg#menu" />
 		</svg>`)
 	})
 })
@@ -172,13 +172,13 @@ function na() {
 		  ia(zr),
 		  (zn.innerHTML = `
 		<svg class="header__img-icon">
-			<use xlink:href="./assets/sprite-d8b9b76e.svg#menu" />
+			<use xlink:href="./sprite-d8b9b76e.svg#menu" />
 		</svg>`))
 		: ((zr.dataset.menu = 'open'),
 		  Kl(zr),
 		  (zn.innerHTML = `
 		<svg class="header__img-icon">
-			<use xlink:href="./assets/sprite-d8b9b76e.svg#close" />
+			<use xlink:href="./sprite-d8b9b76e.svg#close" />
 		</svg>`))
 }
 zn.addEventListener('click', na)
