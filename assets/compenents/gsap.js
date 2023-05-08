@@ -277,6 +277,7 @@ if (ScrollTrigger.isTouch !== 1) {
 			}
 		)
 	})
+
 	card.forEach(item => {
 		gsap.fromTo(
 			item,
@@ -289,8 +290,8 @@ if (ScrollTrigger.isTouch !== 1) {
 				opacity: 1,
 				scrollTrigger: {
 					trigger: '.about',
-					start: 'bottom 90%',
-					end: 'bottom 40%',
+					start: 'bottom 94%',
+					end: 'bottom 38%',
 
 					scrub: true,
 				},
@@ -494,9 +495,10 @@ if (ScrollTrigger.isTouch == 1) {
 				scale: 1,
 				opacity: 1,
 				scrollTrigger: {
-					trigger: item,
-					start: '-130px 92%',
-					end: '-90px 78%',
+					trigger: '.about',
+					start: 'bottom 94%',
+					end: 'bottom 38%',
+
 					scrub: true,
 				},
 			}
