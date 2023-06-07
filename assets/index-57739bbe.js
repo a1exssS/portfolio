@@ -4866,7 +4866,7 @@ const wc = Q.timeline(),
 	Tc = Q.timeline({defaults: {durations: 0.5}, repeat: -1, repeatDelay: 1}),
 	bc = Q.timeline({defaults: {durations: 0.5}, repeat: -1, repeatDelay: 1}),
 	Sc = Q.timeline({defaults: {durations: 0.5}, repeat: -1, repeatDelay: 1})
-wc.fromTo('.hero__title', {opacity: 0, x: 30}, {opacity: 1, duration: 1, x: 0}, 0.5).fromTo('.hero__subtitle', {opacity: 0, x: -30}, {opacity: 1, duration: 1, x: 0}, 1).fromTo('.hero__link', {opacity: 0, y: 30}, {opacity: 1, duration: 1, y: 0}, 1.5).fromTo('.header__logo', {y: -20, opacity: 0}, {y: 0, opacity: 1, duration: 1}, 0.5).fromTo('.header__navigation a', {y: -20, opacity: 0}, {y: 0, duration: 0.2, stagger: 0.15, opacity: 1}, 0.5).fromTo('.hero__background-video', {opacity: 0}, {opacity: 1, duration: 1}, 0.5)
+wc.fromTo('.hero__title', {opacity: 0, x: 30}, {opacity: 1, duration: 1, x: 0}, 0.5).fromTo('.hero__subtitle', {opacity: 0, x: -30}, {opacity: 1, duration: 1, x: 0}, 1).fromTo('.hero__link', {opacity: 0, y: 30}, {opacity: 1, duration: 1, y: 0}, 1.5).fromTo('.header__logo-link', {y: -20, opacity: 0}, {y: 0, opacity: 1, duration: 1}, 0.5).fromTo('.header__navigation a', {y: -20, opacity: 0}, {y: 0, duration: 0.2, stagger: 0.15, opacity: 1}, 0.5).fromTo('.hero__background-video', {opacity: 0}, {opacity: 1, duration: 1}, 0.5)
 const po = window.pageYOffset || document.documentElement.scrollTop,
 	Pc = document.querySelector('.about__title'),
 	kc = document.querySelector('.portfolio__main-title'),
