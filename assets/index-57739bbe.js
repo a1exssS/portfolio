@@ -5,13 +5,16 @@ const imgOptions = {
 }
 
 function preloadImage(img) {
-	const src = img.getAttribute('data-src')
+	const srcset = img.getAttribute('data-src')
 
-	if (!src) {
+	if (!srcset) {
 		return
 	}
-
-	img.srcset = src
+	if (img.tagName === 'IMG') {
+		img.src = srcset
+	} else {
+		img.srcset = srcset
+	}
 }
 
 const imgObserver = new IntersectionObserver((entries, imgObserver) => {
