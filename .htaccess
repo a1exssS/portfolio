@@ -1,0 +1,17 @@
+<IfModule mod_expires.c>
+	Cache-Control: max-age=31536000
+	Expires: [Fri, 31 Dec 2023 23:59:59 GMT]
+   ExpiresActive On
+
+   # Установка долгого срока кэширования для изображений (1 год)
+   ExpiresByType image/jpeg "access plus 1 year"
+   ExpiresByType image/png "access plus 1 year"
+   ExpiresByType image/webp "access plus 1 year"
+   ExpiresByType image/gif "access plus 1 year"
+   ExpiresByType image/svg+xml "access plus 1 year"
+
+   # Установка долгого срока кэширования для CSS и JS (1 неделя)
+   ExpiresByType text/css "access plus 1 week"
+   ExpiresByType application/javascript "access plus 1 week"
+   ExpiresByType application/x-javascript "access plus 1 week"
+</IfModule>
