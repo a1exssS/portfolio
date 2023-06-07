@@ -4870,14 +4870,14 @@ Ec()
 let Un = Q.utils.toArray('.about__box'),
 	Ll = Q.utils.toArray('.portfolio__card'),
 	Dc = Q.utils.toArray('.contacts__item'),
-	Ac = Q.utils.toArray('.footer__image-link')
+	Ac = Q.utils.toArray('.footer__img-link')
 Sc.to('.about__skill-box svg', {stagger: {each: 0.1, from: 'edges'}, scale: 1})
 	.to('.about__skill-box svg', {stagger: {each: 0.1, from: 'edges'}, scale: 1.1})
 	.to('.about__skill-box svg', {stagger: {each: 0.1, from: 'edges'}, scale: 1, ease: 'power1.out'})
 Ac.forEach(a => {
 	bc.to(a, {rotation: -20}).to(a, {rotation: 20}).to(a, {rotation: 0, ease: 'power1.out'})
 })
-let Rc = Q.utils.toArray('.contacts__image')
+let Rc = Q.utils.toArray('.contacts__img')
 Rc.forEach(a => {
 	Tc.to(a, {scale: 1.2}).to(a, {rotation: -20}).to(a, {rotation: 20}).to(a, {scale: 1, rotation: 0, ease: 'power1.out'})
 })
@@ -4909,7 +4909,7 @@ function zl() {
 		Q.fromTo('.footer__copy', {opacity: 0, x: 100}, {x: 0, opacity: 1, scrollTrigger: {trigger: '.footer', start: 'top 96%', end: '10% 92%', scrub: !0}}),
 		W.refresh()
 }
-const Lc = document.querySelectorAll('.portfolio__button'),
+const Lc = document.querySelectorAll('.portfolio__btn'),
 	ta = document.querySelectorAll('.portfolio__card')
 Lc.forEach(a => {
 	a.addEventListener('click', () => {
@@ -4923,10 +4923,10 @@ Lc.forEach(a => {
 			  })
 	})
 })
-const zc = document.querySelectorAll('.portfolio__button')
+const zc = document.querySelectorAll('.portfolio__btn')
 let ms = null,
 	$s = 0,
-	Fc = document.querySelector('.portfolio__button')
+	Fc = document.querySelector('.portfolio__btn')
 $s == 0 && (zl(), Rl())
 zc.forEach(a => {
 	a.addEventListener('click', () => {
@@ -5056,7 +5056,7 @@ qc.forEach(a => {
 		;(zr.dataset.menu = 'close'),
 			Il(zr),
 			(Kn.innerHTML = `
-		<svg class="header__image-icon">
+		<svg class="header__img-icon">
 			<use xlink:href="./assets/sprite-d8b9b76e.svg#menu" />
 		</svg>`)
 	})
@@ -5066,13 +5066,13 @@ function Yl() {
 		? ((zr.dataset.menu = 'close'),
 		  Il(zr),
 		  (Kn.innerHTML = `
-		<svg class="header__image-icon">
+		<svg class="header__img-icon">
 			<use xlink:href="./assets/sprite-d8b9b76e.svg#menu" />
 		</svg>`))
 		: ((zr.dataset.menu = 'open'),
 		  $c(zr),
 		  (Kn.innerHTML = `
-		<svg class="header__image-icon">
+		<svg class="header__img-icon">
 			<use xlink:href="./assets/sprite-d8b9b76e.svg#close" />
 		</svg>`))
 }

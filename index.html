@@ -28,7 +28,7 @@
 				<a href="#" class="navigation__link">Портфолио</a>
 				<a href="#" class="navigation__link">Контакты</a>
 			</nav>
-			<button data-menu-open data-menu-close class="navigation__button">
+			<button data-menu-open data-menu-close aria-label="navigation" class="navigation__button">
 				<svg class="header__image-icon">
 					<use xlink:href="./assets/sprite-d8b9b76e.svg#menu" />
 				</svg>
@@ -98,10 +98,11 @@
 			<div class="container portfolio__container">
 				<h2 class="portfolio__main-title">Мои Проекты</h2>
 				<div class="portfolio__box">
-					<button class="portfolio__button active" data-filter="all">все</button>
-					<button class="portfolio__button" data-filter="lending-pages">Лендинги</button>
-					<button class="portfolio__button" data-filter="apps">приложения</button>
-					<button class="portfolio__button" data-filter="api">API</button>
+					<button class="portfolio__button active" aria-label="all data" data-filter="all">все</button>
+					<button class="portfolio__button" aria-label="lenging-pages data"
+						data-filter="lending-pages">Лендинги</button>
+					<button class="portfolio__button" aria-label="apps data" data-filter="apps">приложения</button>
+					<button class="portfolio__button" aria-label="api data" data-filter="api">API</button>
 				</div>
 				<div class="portfolio__box">
 
